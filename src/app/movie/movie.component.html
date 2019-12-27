@@ -1,9 +1,9 @@
-<ion-item (click)="onMovieClick()">
-  <ion-avatar slot="start">
-    <img src="{{movie.Poster}}">
-  </ion-avatar>
-  <ion-label>
-    <h2>{{movie.Title}}</h2>
-    <p>{{movie.Year}}</p>
-  </ion-label>
+<ion-item [routerLink]="['/movies', movie.imdbID]">
+	<ion-avatar slot="start">
+		<img src="{{ movie.Poster }}" />
+	</ion-avatar>
+	<ion-label>
+		<h2>{{ movie.Title }}</h2>
+		<p>{{ movie.Year }}</p>
+	</ion-label>
 </ion-item>

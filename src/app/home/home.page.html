@@ -1,19 +1,14 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-toolbar>
+	<ion-toolbar>
+		<ion-title>
+			Movie Search
+		</ion-title>
+	</ion-toolbar>
 </ion-header>
 
-<ion-content *ngIf="!selectedMovie">
-  <div class="ion-padding">
-      <ion-searchbar [(ngModel)]="searchInput"></ion-searchbar>
-      <app-movie-list (selectedMovie)="onMovieSelected($event)" [searchInput]="searchInput"></app-movie-list>
-   </div>
-</ion-content>
-<ion-content *ngIf="selectedMovie">
-  <div class="ion-padding">
-      <app-movie-detail [movie]="selectedMovie"></app-movie-detail>
-   </div>
+<ion-content>
+	<div class="ion-padding">
+		<ion-searchbar [(ngModel)]="searchInput"></ion-searchbar>
+		<app-movie-list [searchInput]="searchInput"></app-movie-list>
+	</div>
 </ion-content>

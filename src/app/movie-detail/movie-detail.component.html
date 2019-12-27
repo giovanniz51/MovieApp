@@ -1,11 +1,17 @@
-<ion-card *ngIf="movieDetail">
-    <img [src]="movieDetail.Poster" />
-    <ion-card-header>
-      <ion-card-subtitle>{{movieDetail.Year}}</ion-card-subtitle>
-      <ion-card-title>{{movieDetail.Title}}</ion-card-title>
-    </ion-card-header>
-    <ion-card-content>
-      {{movieDetail.Plot}}
-    </ion-card-content>
-</ion-card>
-
+<ion-content *ngIf="movieDetail">
+	<ion-card>
+		<img [src]="movieDetail.Poster" />
+		<ion-card-header>
+			<ion-card-subtitle>{{ movieDetail.Year }}</ion-card-subtitle>
+			<ion-card-title>{{ movieDetail.Title }}</ion-card-title>
+		</ion-card-header>
+		<ion-card-content>
+			{{ movieDetail.Plot }}
+		</ion-card-content>
+	</ion-card>
+	<ion-fab vertical="top" horizontal="start" slot="fixed">
+		<ion-fab-button [routerLink]="['']" router-direction="back">
+			<ion-icon name="arrow-dropleft"></ion-icon>
+		</ion-fab-button>
+	</ion-fab>
+</ion-content>
