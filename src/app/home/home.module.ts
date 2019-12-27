@@ -5,7 +5,9 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
 import { HomePage } from './home.page';
-
+import { MovieListComponent } from '../movie-list/movie-list.component';
+import { MovieComponent } from '../movie/movie.component';
+import { MovieDetailComponent} from '../movie-detail/movie-detail.component';
 @NgModule({
   imports: [
     CommonModule,
@@ -18,6 +20,6 @@ import { HomePage } from './home.page';
       }
     ])
   ],
-  declarations: [HomePage]
+  declarations: [HomePage, MovieListComponent, MovieComponent, MovieDetailComponent]
 })
 export class HomePageModule {}

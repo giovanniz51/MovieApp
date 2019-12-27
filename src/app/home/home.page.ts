@@ -6,7 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-
+  selectedMovie
+  searchInput = ""
   constructor() {}
+  
+  onMovieSelected(movie){
+    this.selectedMovie = movie
+  }
 
 }

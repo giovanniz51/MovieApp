@@ -1,0 +1,3 @@
+<ion-list *ngIf="searchInput">
+    <app-movie *ngFor="let movie of movies; let i = index" [movie]="movie" (selectedMovie)="onMovieSelected(movie)"></app-movie>
+<ion-list>

@@ -6,9 +6,14 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content *ngIf="!selectedMovie">
   <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
-  </div>
+      <ion-searchbar [(ngModel)]="searchInput"></ion-searchbar>
+      <app-movie-list (selectedMovie)="onMovieSelected($event)" [searchInput]="searchInput"></app-movie-list>
+   </div>
+</ion-content>
+<ion-content *ngIf="selectedMovie">
+  <div class="ion-padding">
+      <app-movie-detail [movie]="selectedMovie"></app-movie-detail>
+   </div>
 </ion-content>

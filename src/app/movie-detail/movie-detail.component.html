@@ -1,0 +1,11 @@
+<ion-card *ngIf="movieDetail">
+    <img [src]="movieDetail.Poster" />
+    <ion-card-header>
+      <ion-card-subtitle>{{movieDetail.Year}}</ion-card-subtitle>
+      <ion-card-title>{{movieDetail.Title}}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      {{movieDetail.Plot}}
+    </ion-card-content>
+</ion-card>
+
